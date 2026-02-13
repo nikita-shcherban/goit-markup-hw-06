@@ -26,8 +26,14 @@
         <a class="logo" href="./index.html"
           ><span class="web-word">Web</span>Studio</a
         >
-        <nav>
-          <ul class="site-nav">
+        <button type="button" class="menu-btn">
+          <svg class="menu-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <nav class="site-nav">
+          <ul class="site-nav-list">
             <li>
               <a class="studio-link link active" href="./index.html">Studio</a>
             </li>
@@ -35,8 +41,8 @@
             <li><a class="link" href="/">Contacts</a></li>
           </ul>
         </nav>
-        <address>
-          <ul class="site-address">
+        <address class="site-address">
+          <ul class="site-address-list">
             <li>
               <a class="link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
@@ -53,7 +59,7 @@
     <main>
       <section class="upper-section section">
         <div class="container">
-          <h1>Effective Solutions for Your Business</h1>
+          <h1 class="page-title">Effective Solutions for Your Business</h1>
           <button type="button" class="order-button">Order Service</button>
         </div>
       </section>
@@ -484,7 +490,7 @@
 
     <div class="modal-overlay">
       <div class="modal">
-        <button type="button" class="modal-close">
+        <button type="button" class="btn-close">
           <svg class="close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close-modal"></use>
           </svg>
@@ -575,6 +581,79 @@
           <button type="submit" class="modal-button">Send</button>
         </form>
       </div>
+    </div>
+
+    <div class="mobile-menu">
+      <button type="button" class="btn-close">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-modal"></use>
+        </svg>
+      </button>
+      <nav class="site-nav-mobile">
+        <ul class="mobile-nav-list">
+          <li>
+            <a class="studio-link mobile-nav-link link" href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li>
+            <a class="portfolio-link mobile-nav-link link" href="/"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a class="contacts-link mobile-nav-link link" href="/">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="site-address-mobile">
+        <ul class="mobile-address-list">
+          <li>
+            <a
+              class="tel-link mobile-address-link link"
+              href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a
+              class="email-link mobile-address-link link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="mobile-icons">
+        <li>
+          <a href="" target="_blank" class="social-link">
+            <svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="social-link">
+            <svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="social-link">
+            <svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="social-link">
+            <svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
