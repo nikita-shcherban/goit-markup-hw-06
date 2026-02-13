@@ -73,6 +73,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 input,
@@ -87,14 +89,14 @@ input {
 }
 
 .container {
-    max-width: 288px;
-    width: 100%;
-    margin: 0 auto;
-  }
+  max-width: 288px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 736px;
     width: 100%;
     margin: 0 auto;
   }
@@ -110,7 +112,13 @@ input {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 .social-link .icon,
@@ -171,8 +179,8 @@ input {
 
 .mobile-menu.is-open {
   visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .site-nav-mobile {
@@ -194,10 +202,10 @@ input {
   flex-direction: column;
   gap: 24px;
   font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #434455;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
 .mobile-nav-link {
@@ -251,15 +259,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-
-.upper-section .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 48px;
 }
 
 .logo {
@@ -291,13 +291,18 @@ input {
   .menu-btn {
     display: none;
   }
+
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 @media (max-width: 767px) {
   .logo {
     padding: 16px;
   }
-  
+
   .page-header .container {
     padding: 0;
   }
@@ -337,11 +342,46 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 768px) and (max-width: 1157px) {
+  .page-header .container {
+    justify-content: space-between;
+  }
+
+  .site-nav,
+  .site-address {
+    margin: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .site-address-list {
     flex-direction: column;
     gap: 12px;
-    flex-basis: calc((100% - 12px) / 2);
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .site-nav-list .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .site-address-list .link {
+    display: block;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #434455;
+  }
+}
+
+@media (min-width: 1158px) {
+  .site-address-list {
+    flex-direction: row;
+    gap: 40px;
+    flex-basis: calc((100% - 40px) / 2);
   }
 }
 
@@ -370,7 +410,8 @@ input {
 }
 
 @media (max-width: 767px) {
-  .site-nav, .site-address {
+  .site-nav,
+  .site-address {
     display: none;
   }
 }
@@ -379,23 +420,31 @@ input {
 
 /* Upper Section (start) */
 
+.upper-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+
 .upper-section {
   width: 320px;
-  height: 432px;
   margin: 0 auto;
+  padding: 72px 0;
   background-image:
-      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/background-mobile-x1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 72px 0;
-    background-color: #2e2f42;
+    linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/background-mobile-x1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #2e2f42;
 }
 
 @media (min-resolution: 192dpi) and (max-width: 767px) {
   .upper-section {
-  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/background-mobile-x2.jpg);
   }
 }
@@ -403,37 +452,36 @@ input {
 @media (min-width: 768px) {
   .upper-section {
     width: 768px;
-    height: 436px;
     background-image:
       linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/bg-tablet-x1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     padding: 112px 0;
-    background-color: #2e2f42;
   }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) {
   .upper-section {
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/bg-tablet-x2.jpg);
   }
 }
 
 @media (min-width: 1158px) {
-    .upper-section {
-      width: 1440px;
-      height: 600px;
-      background-image:
-        linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      padding: 188px 0;
-      background-color: #2e2f42;
+  .upper-section {
+    width: 1440px;
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/bg-desktop-x1.jpg);
+    padding: 188px 0;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1158px) {
+  .upper-section {
+    background-image:
+      linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/bg-desktop-x2.jpg);
   }
 }
 
@@ -461,18 +509,35 @@ input {
 
 /* Features Section (start) */
 
+.features-section h3 {
+  padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.features-section p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
 .features-list,
 .team-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  flex-basis: calc((100% - 72px) / 4);
+  gap: 72px;
 }
 
 .features-item {
-  width: 264px;
+  width: 288px;
 }
 
 .features-icons {
@@ -485,6 +550,12 @@ input {
   border: 1px solid #8e8f99;
   background-color: #f4f4fd;
   border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .features-icons {
+    display: none;
+  }
 }
 
 /* Features Section (end) */
