@@ -65,10 +65,16 @@ p {
   margin: 0;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
+}
+
+a {
+  display: block;
+  font-style: none;
 }
 
 img {
@@ -89,9 +95,10 @@ input {
 }
 
 .container {
-  max-width: 288px;
+  max-width: 320px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 @media (min-width: 768px) {
@@ -530,8 +537,8 @@ input {
 .features-list,
 .team-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 72px;
 }
@@ -576,6 +583,7 @@ input {
 }
 
 .team-item {
+  max-width: 264px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -599,10 +607,9 @@ input {
 
 .portfolio-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  gap: 48px 24px;
+  gap: 48px;
 }
 
 .portfolio-subitem {
@@ -662,10 +669,11 @@ input {
 
 .page-footer .container {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-info {
@@ -675,21 +683,22 @@ input {
   gap: 16px;
 }
 
+.footer-logo {
+  align-self: center;
+}
+
 .footer-description,
 .footer-logo {
   color: #f4f4fd;
+  padding: 0;
 }
 
 .footer-description {
-  display: flex;
-  max-width: 264px;
-}
-
-.social-links-footer {
-  margin-left: 120px;
+  max-width: 288px;
 }
 
 .social-links-footer p {
+  text-align: center;
   color: #ffffff;
   font-weight: 500;
   margin-bottom: 16px;
@@ -708,24 +717,25 @@ input {
 }
 
 .subscribe-container {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   padding: 0;
 }
 
 .subscribe-form {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
 }
 
 .subscribe-form {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .subscribe-form .subscribe-input {
