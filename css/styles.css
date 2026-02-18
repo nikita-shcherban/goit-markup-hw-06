@@ -233,7 +233,7 @@ input {
   gap: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .mobile-menu {
     display: none;
   }
@@ -349,7 +349,7 @@ input {
   color: #404bbf;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .site-nav,
   .site-address {
     display: none;
@@ -722,25 +722,18 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+.portfolio-image {
+  object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .portfolio-image-tb,
-  .portfolio-image-d {
-    display: none;
+@media (max-width: 767px) {
+  .portfolio-item {
+    max-width: 288px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1157px) {
-  .portfolio-image-m,
-  .portfolio-image-d {
-    display: none;
+  .portfolio-image {
+    width: 288px;
+    height: 280px;
   }
 }
 
@@ -754,6 +747,21 @@ input {
   .portfolio-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+
+  .portfolio-image {
+    width: 356px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1157px) {
+  .portfolio-item,
+  .portfolio-item {
+    box-shadow:
+      0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16),
+      0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
 }
 
 @media (min-width: 1158px) {
@@ -765,9 +773,17 @@ input {
     flex-basis: calc((100% - 24px * 2) / 3);
   }
 
-  .portfolio-image-m,
-  .portfolio-image-tb {
-    display: none;
+  .portfolio-item:hover,
+  .portfolio-item:focus {
+    box-shadow:
+      0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16),
+      0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  .portfolio-image {
+    width: 360px;
+    height: 300px;
   }
 }
 
@@ -927,6 +943,10 @@ input[type="email"]::placeholder {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+  }
+
+  .subscribe-form .form-input {
+    width: 264px;
   }
 }
 
