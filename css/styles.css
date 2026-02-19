@@ -64,7 +64,8 @@ ol {
 
 a {
   display: block;
-  font-style: none;
+  font-style: normal;
+  text-decoration: none;
 }
 
 img {
@@ -101,8 +102,6 @@ input {
 }
 
 .link {
-  font-style: normal;
-  text-decoration: none;
   color: #2e2f42;
   transition-property: color;
   transition-duration: 250ms;
@@ -919,7 +918,7 @@ input[type="email"]::placeholder {
   .page-footer .container {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: baseline;
   }
 
   .footer-description {
