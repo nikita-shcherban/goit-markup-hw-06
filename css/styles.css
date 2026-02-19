@@ -310,12 +310,12 @@ input {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .site-nav-list .link {
   flex-basis: calc((100% - 80px) / 3);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .site-address-list .link {
@@ -330,15 +330,11 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.studio-link.active {
-  color: #404bbf;
-}
-
-.studio-link {
+.link.active {
   position: relative;
 }
 
-.studio-link.active::after {
+.link.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -350,7 +346,8 @@ input {
 }
 
 .page-header .link:hover,
-.page-header .link:focus {
+.page-header .link:focus,
+.link.active {
   color: #404bbf;
 }
 
