@@ -862,7 +862,7 @@ input {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
-  background-color: #2e2f42;
+  background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
