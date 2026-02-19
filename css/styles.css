@@ -79,6 +79,7 @@ textarea,
 button {
   font-family: inherit;
   line-height: inherit;
+  padding: 0;
 }
 
 input {
@@ -287,7 +288,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
   margin-left: auto;
 }
 
@@ -299,7 +299,6 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  flex-basis: calc((100% - 80px) / 3);
   font-weight: 500;
 }
 
@@ -315,10 +314,8 @@ input {
   padding-bottom: 16px;
 }
 
-.site-nav-list .link,
-.site-address-list .link {
-  padding-top: 24px;
-  padding-bottom: 24px;
+.site-nav-list .link {
+  flex-basis: calc((100% - 80px) / 3);
 }
 
 .site-address-list .link {
@@ -327,6 +324,7 @@ input {
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
+  flex-basis: calc((100% - 12px) / 2);
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
