@@ -535,7 +535,7 @@ input {
 }
 
 .features-item {
-  width: 288px;
+  width: 100%;
 }
 
 .features-icons {
