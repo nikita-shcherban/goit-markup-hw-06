@@ -1021,13 +1021,6 @@ input[type="email"]::placeholder {
   border-radius: 4px;
 }
 
-@media (min-width: 768px) {
-  .modal {
-    width: 408px;
-    padding: 24px;
-  }
-}
-
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -1223,4 +1216,19 @@ input[type="email"]::placeholder {
   background-color: #404bbf;
 }
 
+@media (min-width: 768px) {
+  .modal {
+    position: relative;
+    width: 408px;
+    padding: 24px;
+    padding-top: 72px;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    margin: 0;
+  }
+}
 /* Modal Overlay (end) */
